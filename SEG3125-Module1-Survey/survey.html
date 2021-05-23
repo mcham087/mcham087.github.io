@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://mcham087.github.io/SEG3125-Module1-Survey/surveystyle.css">
+        <title>Sondage</title>
+    </head>
+    <body>
+    <header>
+        <h1>Sondage : Evaluez un tableau de bord</h1>
+    </header>
+    <section class="content">
+    <div class="intro">
+        <p>Le site que j'ai choisi de vous faire évaluer s'appelle <a href="https://habitica.com/">Habitica</a>. Habitica est une application très cool et facile à prendre en main permettant d'organiser ses listes de tâches comme un RPG. Et comme j'aime les RPG, c'est parfait pour moi ^^ !</p><br/>
+        <img src="screenshot_habitica.jpg" alt="Mon tableau de bord Habitica" title="Mon tableau de bord Habitica !" class="screenshot" />
+    </div>
+
+        <form>
+            <div class="question">
+                <h2> Information Personelle </h2>
+                <p>First name: <input type="text" name="firstname"></p>
+                <p>Last name: <input type="text" name="lastname"></p>
+                <br>
+                <br>
+                    
+            </div>
+            <div class="question">
+                <p class="enonc">Utilisez vous souvent des listes de tâches ?</p>
+                <input type="radio" name="todo" value="souvent" id="souvent" /><label for="souvent">Oui, souvent.</label><br/>
+                <input type="radio" name="todo" value="parfois" id="parfois" /><label for="parfois">Parfois, de temps en temps.</label><br/>
+                <input type="radio" name="todo" value="rarement" id="rarement" /><label for="rarement">Non, rarement.</label><br/>
+            </div>
+
+            <div class="question">
+                <p class="enonc">La quantité d'informations sur le tableau de bord est :</p>
+                <input type="radio" name="dashboard" value="trop_grande" id="trop_grande"/><label for="trop_grande">Trop grande, c'est confus.</label><br/>
+                <input type="radio" name="dashboard" value="grande" id="grande"/><label for="grande">Grande, mais j'apprécie d'avoir beaucoup d'informations.</label><br/>
+                <input type="radio" name="dashboard" value="raisonnable" id="raisonnable"/><label for="raisonnable">Raisonnable, c'est bien comme ça.</label><br/>
+                <input type="radio" name="dashboard" value="legere" id="legere"/><label for="legere">Légère, mais j'apprécie.</label><br/>
+                <input type="radio" name="dashboard" value="trop_legere" id="trop_legere"/><label for="trop_legere">Trop légère, j'aurais aimé plus d'informations.</label><br/>
+            </div>
+
+            <div class="question">
+                <p class="enonc">Sélectionnez les propositions avec lesquelles vous êtes d'accord :</p>
+                <input type="checkbox" name="agreable" id="agreable"/><label for="agreable">L'application est agréable a utiliser</label><br/>
+                <input type="checkbox" name="clair" id="clair"/><label for="clair">Le tableau de bord est clair</label><br/>
+                <input type="checkbox" name="onglets" id="onglets"/><label for="onglets">Il y a trop d'onglets à mon goût</label><br/>
+                <input type="checkbox" name="ajouter" id="ajouter"/><label for="ajouter">Il est facile d'ajouter une tâche et de la cocher</label><br/>
+                <input type="checkbox" name="edit" id="edit"/><label for="edit">Il est facile d'éditer une tâche</label><br/>
+                <input type="checkbox" name="couleurs" id="couleurs"/><label for="couleurs">L'interface a trop de couleurs différentes</label><br/>
+                <input type="checkbox" name="icones" id="icones"/><label for="icones">Je reconnais toutes les icônes</label><br/>
+            </div>
+
+            <div class="question">
+                <p class="enonc">Selon vous, lequel des éléments suivants est bien mis en œuvre? (Sélectionnez tout ce qui s'y rapporte)</p>
+                <select size="7" multiple="">
+                    <option value="Mac">Choix de couleurs</option>
+                    <option value="iPad">Organisation du page</option>
+                  <option value="iPhone">Coherence des pages</option>
+                   <option value="Watch">Fiabilite de system</option>
+                  <option value="TV">Efficacite de tableau</option>
+                    <option value="Music">Communication</option>
+                    <option value="Support">l'interface usagers</option>
+              </select>
+            </div>
+
+            <div class="question">
+                <p class="enonc">L'utilisation de l'application vous semble intuitive :</p>
+                <input type="radio" name="usage" value="dacodac" id="dacodac"/><label for="dacodac">Tout à fait d'accord</label><br/>
+                <input type="radio" name="usage" value="dac" id="dac"/><label for="dac">Plutôt d'accord</label><br/>
+                <input type="radio" name="usage" value="neutre" id="neutre"/><label for="neutre">Neutre</label><br/>
+                <input type="radio" name="usage" value="desac" id="desac"/><label for="desac">Pas vraiment</label><br/>
+                <input type="radio" name="usage" value="dutout" id="dutout"/><label for="dutout">Pas du tout d'accord</label><br/>
+            </div>
+
+            <div class="question">
+                <p class="enonc">trouvez-vous facile d'accéder rapidement aux informations dont vous avez besoin?</p>
+                <select class="dropdown-options">
+                    <option value="" selected="">(Selectionez)</option>
+                    <option value="1">Trop difficile</option>
+                    <option value="2">difficile</option>
+                    <option value="3">Neutre</option>
+                    <option value="4">facile</option>
+                    <option value="5">trop facile</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <p class="enonc">Comment trouvez vous l'aspect gamification de l'interface ?</p>
+                <input type="radio" name="game" value="encombrant" id="encombrant"/><label for="encombrant">Encombrant, il rend la prise en main de l'application difficile.</label><br/>
+                <input type="radio" name="game" value="inutile" id="inutile"/><label for="inutile">Inutile. Il n'a aucun effet particulier.</label><br/>
+                <input type="radio" name="game" value="pas_ess" id="pas_ess"/><label for="pas_ess">Agréable mais non essentiel.</label><br/>
+                <input type="radio" name="game" value="motiv" id="motiv"/><label for="motiv">Agréable et motivant.</label><br/>
+            </div>
+
+            <div class="question">
+                    <label for="descr" class="enonc">Pourriez vous décrire ce que l'interface vous évoque en trois adjectifs ?</label><br/>
+                    <input type="text" name="descr" class="zonetxt" /><br/>
+            </div>
+
+            <div class="question">
+                    <label for="ameliorer" class="enonc">Comment pensez vous qu'on puisse améliorer l'interface ?</label><br/>
+                    <textarea name="ameliorer" id="ameliorer" class="zonetxt"></textarea>
+            </div>
+
+                <input type="submit" value="Envoyer !" class="question" />
+        </form>
+    </section>
+
+    <footer>
+        <p>Site web conçu par Mariah Chamoun 300136871</p>
+    </footer>
+
+    </body>
+</html>
