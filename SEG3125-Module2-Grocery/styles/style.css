@@ -1,0 +1,133 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+html{
+  font-family: 'Helvetica', sans-serif;
+
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ffd358;
+  color: #FFFFFF;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #0072ce;
+  color: #FFFFFF;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: rgb(255, 255, 255);
+}
+.header{font-family: 'Noto Sans JP', cursive;
+  font-size: xx-large;
+  position: flex;
+}
+body{
+  background-color: #0072ce  ;
+  /*background-image: url('https://images.unsplash.com/photo-1590632779817-de79769fb925?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');*/
+  /*background-size: cover;*/
+  /*!*background-repeat: no-repeat;*!*/
+  margin: 0px;
+}
+.store{
+  margin: 8px;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+  background-color: #0072ce;
+  color: #FFFFFF;
+}
+tr:nth-child(even) {
+
+}
+
+.footerr{
+  background-color: #ffd358;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 16;
+  padding: 10px 0;
+  margin-top: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center_text{
+  text-align: center;
+}
+
+.p_ft{
+  margin: 0;
+}
+.header-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo{
+  color: #ffd358;
+}
+
+.walmart-star-logo {
+  fill: #ffd358;
+  flex: 1;
+}
+
+.store_btn{
+  /*background-color: darkcyan;*/
+  border: black 0.5px solid;
+  color: #FFFFFF  ;
+  background-color: #0072ce;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.placeholder{
+  height: 200px
+}
+
+.store_btn:hover{
+  /*background-color: darkcyan;*/
+  border: black 0.5px solid;
+  color: #FFFFFF  ;
+  background-color: #ffd358;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 2px rgb(238, 238, 238);
+}

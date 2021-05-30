@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SEG3525 Module 2-Grocery</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body onload="openInfo(event, 'Client');document.getElementById('tab1').className +=' active';">
+<div class="header">
+    <div class="header-logo">
+        <h1 class="Tile logo center_text"> Mariah's Mart</h1>
+        <svg class="walmart-star-logo"><defs></defs><path id="sparklogo_Shape" class="cls-1" d="M20.84 16.73a1.91 1.91 0 0 0 2-1.25l1-11.64c0-1.15-1.35-2.1-3-2.1s-3.05 1-3.05 2.1l1 11.64a1.92 1.92 0 0 0 2 1.25"></path><path id="sparklogo_Shape-2" data-name="Shape" class="cls-1" d="M14.54 20.37a1.89 1.89 0 0 0-.07-2.37l-9.58-6.72c-1-.58-2.49.11-3.33 1.59s-.71 3.1.28 3.68l10.61 4.94a1.94 1.94 0 0 0 2.09-1.13"></path><path id="sparklogo_Shape-3" data-name="Shape" class="cls-1" d="M27.15 20.36a1.92 1.92 0 0 0 2.09 1.13l10.6-4.94c1-.58 1.15-2.22.3-3.68s-2.35-2.17-3.34-1.59L27.22 18a1.91 1.91 0 0 0-.07 2.37"></path><path id="sparklogo_Shape-4" data-name="Shape" class="cls-1" d="M20.84 31.28a1.91 1.91 0 0 1 2 1.24l1 11.64c0 1.15-1.35 2.1-3 2.1s-3.05-.95-3.05-2.1l1-11.64a1.92 1.92 0 0 1 2-1.24"></path><path id="sparklogo_Shape-5" data-name="Shape" class="cls-1" d="M27.15 27.64a1.91 1.91 0 0 1 2.09-1.12l10.6 4.93c1 .58 1.15 2.22.3 3.69s-2.35 2.16-3.34 1.59L27.22 30a1.91 1.91 0 0 1-.07-2.37"></path><path id="sparklogo_Shape-6" data-name="Shape" class="cls-1" d="M14.54 27.64a1.9 1.9 0 0 1-.07 2.36l-9.58 6.73c-1 .57-2.49-.13-3.33-1.59s-.71-3.14.28-3.69l10.61-4.93a1.91 1.91 0 0 1 2.09 1.12"></path></svg>    
+    </div>
+   </div>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="store">
+    <div class="tab">
+        <button id="tab1" class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+        <button id=tab2 class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+        <button id=tab3 class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Client" class="tabcontent">
+        <h3>Client Information</h3>
+        <!--    <h5>Tell us a bit about you.</h5>-->
+        <form id="consumer_info">
+            <p>Please select all dietary restriction which apply:</p>
+
+            <div class="options" class="diet_rest"
+                 onchange="populateListProductChoices('consumer_info', 'displayProduct')">
+                <input type=checkbox id="vegetarian" name="dietSelect" value="Veg">
+                <label for="vegetarian">Vegetarian</label><br>
+                <input type=checkbox id="gluten_free" name="dietSelect" value="Glut">
+                <label for="gluten_free">Gluten Free</label><br>
+            </div>
+            <p> Are you interested in organic products when available?</p>
+            <div class="options" onchange="populateListProductChoices('consumer_info', 'displayProduct')">
+                <input class="org" type="radio" id="organic" name="organic" value="Org">
+                <label for="organic">Yes</label><br>
+                <input type="radio" id="not_organic" name="organic" value="Non_Org" checked="checked">
+                <label for="not_organic">No</label><br>
+            </div>
+            <br>
+            <button id="start_shopping" type="button" class="store_btn"
+                    onclick="populateListProductChoicesWrapper('consumer_info', 'displayProduct')"> Start Shopping
+            </button>
+            <br>
+            <br>
+        </form>
+
+    </div>
+
+    <div id="Products" class="tabcontent">
+        <h3>Your Targeted Products</h3>
+        <p>We preselected products based on your restrictions.</p>
+        Choose items to buy:
+        <br><br>
+        <div onchange="selectedItems()">
+            <table id="displayProduct">
+
+            </table>
+        </div>
+        <br>
+        <button id="addCart" type="button" class="block store_btn"   onclick="select_items_wrapper()">
+            Add Selected Items to Cart
+        </button>
+        <button id="add_product" type="button" class="block store_btn"  onclick="back_to_info()">
+            Go Back to Client
+        </button>
+        <br><br>
+
+    </div>
+
+    <div id="Cart" class="tabcontent">
+        <h3>Cart</h3>
+        <p>Here is your cart.</p>
+        <div id="displayCart"></div>
+        <br>
+        <button id="add_product" type="button" class="block store_btn"  onclick="back_to_cart()">
+            Go Back to Products List
+        </button>
+        <br><br>
+    </div>
+</div>
+<div class="placeholder">&nbsp;</div>
+
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+<footer class="footerr">
+
+    <p class="p_ft"> Website created by: Mariah Chamoun 300136871</br>
+        University of Ottawa
+    </p>
+
+</footer>
+</html>
