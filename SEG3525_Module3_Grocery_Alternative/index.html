@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SEG3525 Module 2-Grocery</title>
+    <! This style sheet is taken from https://www.w3schools.com/howto/howto_js_tabs.asp>
+    <link href="styles/style_v2.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&amp;family=Open+Sans:wght@300&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="openInfo(event, 'Client');document.getElementById('nav_bar_client').className
++=' active'; populateListProductChoices('consumer_info');selectedItems();show_cart_items()">
+<div class="header">
+    <div class="header-logo">
+        <h1 class="Tile logo center_text"> Mariah's Mart</h1>
+        <svg class="walmart-star-logo"><defs></defs><path id="sparklogo_Shape" class="cls-1" d="M20.84 16.73a1.91 1.91 0 0 0 2-1.25l1-11.64c0-1.15-1.35-2.1-3-2.1s-3.05 1-3.05 2.1l1 11.64a1.92 1.92 0 0 0 2 1.25"></path><path id="sparklogo_Shape-2" data-name="Shape" class="cls-1" d="M14.54 20.37a1.89 1.89 0 0 0-.07-2.37l-9.58-6.72c-1-.58-2.49.11-3.33 1.59s-.71 3.1.28 3.68l10.61 4.94a1.94 1.94 0 0 0 2.09-1.13"></path><path id="sparklogo_Shape-3" data-name="Shape" class="cls-1" d="M27.15 20.36a1.92 1.92 0 0 0 2.09 1.13l10.6-4.94c1-.58 1.15-2.22.3-3.68s-2.35-2.17-3.34-1.59L27.22 18a1.91 1.91 0 0 0-.07 2.37"></path><path id="sparklogo_Shape-4" data-name="Shape" class="cls-1" d="M20.84 31.28a1.91 1.91 0 0 1 2 1.24l1 11.64c0 1.15-1.35 2.1-3 2.1s-3.05-.95-3.05-2.1l1-11.64a1.92 1.92 0 0 1 2-1.24"></path><path id="sparklogo_Shape-5" data-name="Shape" class="cls-1" d="M27.15 27.64a1.91 1.91 0 0 1 2.09-1.12l10.6 4.93c1 .58 1.15 2.22.3 3.69s-2.35 2.16-3.34 1.59L27.22 30a1.91 1.91 0 0 1-.07-2.37"></path><path id="sparklogo_Shape-6" data-name="Shape" class="cls-1" d="M14.54 27.64a1.9 1.9 0 0 1-.07 2.36l-9.58 6.73c-1 .57-2.49-.13-3.33-1.59s-.71-3.14.28-3.69l10.61-4.93a1.91 1.91 0 0 1 2.09 1.12"></path></svg>    
+    </div>
+   </div>
+
+<!--Adapted code from W3 Schools at https://www.w3schools.com/howto/howto_css_sidebar_icons.asp-->
+<div class="sidebar ">
+    <div class="vertical-adjust">
+        <button id="nav_bar_client" class="side_bar_button"
+                onclick="openInfo(event, 'Client')"><i
+                class="fa fa-fw fa-user"></i> Client
+        </button>
+        <button id="nav_bar_products" class="side_bar_button"
+                onclick="openInfo(event, 'Products')"><i
+                class="fa fa-fw fa-barcode"></i> Products</button>
+        <button id="nav_bar_cart" class="side_bar_button" onclick="openInfo(event, 'Cart')"><i
+                class="fa fa-fw fa-shopping-cart"></i> Cart</button>
+
+    </div>
+
+</div>
+<!--End adapted code-->
+
+<div class="store  main  ">
+
+
+
+    <div id="Client" class="tabcontent">
+        <h3>Client Preferences</h3>
+
+        <form id="consumer_info">
+            <p>Please select all applicable dietary restrictions &amp; preferences:</p>
+
+            <div class="options diet_rest"
+                 onchange="populateListProductChoices('consumer_info')">
+<!--                Adapted code form https://www.w3schools.com/howto/howto_css_switch.asp-->
+
+                <label class="switch">
+                    <input type="checkbox" id="vegetarian" name="dietSelect" value="Veg">
+                    <span class="slider round"></span>
+
+                </label> <span class="toggle_label"> Vegetarian</span><br><br>
+
+
+
+
+                <label class="switch">
+                    <input type="checkbox"  id="gluten_free" name="dietSelect" value="Glut">
+                    <span class="slider round"></span>
+                </label><span class="toggle_label">Celiac / Gluten Intolerant</span><br><br>
+
+                <label class="switch">
+                    <input type="checkbox" class="org"  id="organic" name="organic" value="Org">
+                    <span class="slider round"></span>
+
+                </label> <span class="toggle_label"> Interested in Organic Products</span><br><br>
+
+<!--            End adapted code-->
+            </div>
+
+            <br>
+            <button id="start_shopping" type="button" class="store_btn"
+                    onclick="populateListProductChoicesWrapper('consumer_info')"> Start Shopping
+            </button>
+            <br>
+            <br>
+        </form>
+
+    </div>
+
+    <div id="Products" class="tabcontent">
+        <h3>Personalized Products</h3>
+        <p>We filtered out products based on your preferences.</p>
+        <p>The items are sorted into categories. Click on a category to see the relevant
+            products.</p>
+
+        <!-- Accordion code adapted from W3 School at https://www.w3schools.com/howto/howto_js_accordion.asp     -->
+        <div onchange="selectedItems()">
+            <button class="accordion">Fruits & Vegatbales</button>
+            <div class="panel">
+                <table id="fruit_veg_products">
+                </table>
+            </div>
+
+            <button class="accordion">Grains</button>
+            <div class="panel">
+                <table id="grain_products">
+                </table>
+            </div>
+
+            <button class="accordion">Meats & Fish</button>
+            <div class="panel">
+                <table id="meat_products">
+                </table>
+            </div>
+            <button class="accordion">Other</button>
+            <div class="panel">
+                <table id="other_products">
+                </table>
+            </div>
+<!--            End adapted code-->
+        </div>
+        <br>
+        <button id="addCart" type="button" class="block store_btn"   onclick="select_items_wrapper()">
+            Add Selected Items to Cart
+        </button>
+        <br><br>
+
+    </div>
+
+    <div id="Cart" class="tabcontent">
+        <h3>Cart</h3>
+        <div class="cart_product_box">
+
+            <button id="see_cart_items" type="button" class="block cart_btn"
+                    onclick="show_cart_items()" value="">Show Cart Items
+
+            </button>
+            <div id="cart_items"></div>
+        </div>
+        <br>
+        <div id="displayCart"></div>
+        <br>
+        <button id="add_product" type="button" class="block store_btn"  onclick="back_to_cart()">
+            Add More Products
+        </button>
+        <br><br>
+    </div>
+</div>
+<div class="placeholder">&nbsp;</div>
+
+
+<script src="scripts/groceries_v2.js"></script>
+<script src="scripts/main_v2.js"></script>
+<footer class="footerr">
+
+    <p class="p_ft"> Website created by: Mariah Chamoun 300136871</br>
+        University of Ottawa
+    </p>
+
+</footer>
+</body>
+
+</html>

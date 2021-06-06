@@ -1,0 +1,347 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+html{
+  font-family: 'Helvetica', sans-serif;
+  /*background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=486&q=80") ;*/
+  /*background-size: cover;*/
+
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #FFB81C;
+  color: #FFFFFF;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #0072ce;
+  color: #FFFFFF;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: rgb(255, 255, 255);
+}
+.header{font-family: 'Indie Flower', cursive;
+  font-size: xx-large;
+  margin-left: 200px;
+}
+body{
+  background-color: #0072ce  ;
+  /*background-image: url('https://images.unsplash.com/photo-1590632779817-de79769fb925?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');*/
+  /*background-size: cover;*/
+  /*!*background-repeat: no-repeat;*!*/
+  margin: 0px;
+}
+.store{
+  margin: 8px;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr:nth-child(odd) {
+  background-color: #0072ce;
+  color: #FFFFFF;
+}
+tr:nth-child(even) {
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.header-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo{
+  color: #FFB81C;
+}
+
+.walmart-star-logo {
+  fill: #FFB81C;
+  flex: 1;
+}
+
+
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center_text{
+  text-align: center;
+}
+
+.p_ft{
+  margin: 0;
+}
+
+.blue{
+  color: rgb(0, 161, 161);
+}
+.store_btn{
+  /*background-color: darkcyan;*/
+  border: black 0.5px solid;
+  color: #FFFFFF  ;
+  background-color: #0072ce;
+  padding: 5px 8px;
+  border-radius: 3px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.placeholder{
+  height: 200px
+}
+.placeholder_2{
+  height: 180px
+}
+
+.store_btn:hover{
+  /*background-color: darkcyan;*/
+  border: black 0.5px solid;
+  color: #FFFFFF  ;
+  background-color: #FFB81C;
+  padding: 5px 8px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px 2px darkgrey;
+}
+
+.product_picture{
+    width: 100px;
+    padding: 10px;
+    float: right;
+    height: 100px;
+}
+
+/*Accordion styles adapted from W3 Schools at https://www.w3schools.com/howto/howto_js_accordion.asp*/
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 1.2em;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #0072ce;
+  color: white;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  /*max-height: 0;*/
+}
+
+.accordion:after {
+  content: '+'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #0072ce;
+  float: right;
+  margin-left: 5px;
+}
+
+.active_accordion:after, .accordion {
+  content: "-"; /* Unicode character for "minus" sign (-) */
+}
+
+/*Sidebar style adapted from W3 Schools at https://www.w3schools.com/howto/howto_js_dropdown_sidenav.asp */
+/* Style the sidebar - fixed full height */
+.sidebar {
+  height: 100%;
+  width: 157px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FFB81C;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+
+
+/* Style the main content */
+.main {
+  margin-left: 157px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+  /*position: relative;*/
+  top: 40%;
+}
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.side_bar_button{
+  width: 155px;
+  margin: 2px;
+  border: 0px grey solid;
+  background: #FFB81C;
+  color: black;
+  font-size: x-large;
+  display: block;
+  padding: 6px 8px 6px 8px;
+  text-align: left;
+}
+.side_bar_button:focus{
+   border: none;
+   outline: none;
+
+ }
+
+.side_bar_button:hover{
+   color: black;
+  background-color: #FFB81C;
+
+ }
+
+.side_bar_button.active{
+  color: white;
+  background-color: #0072ce;
+
+}
+/*End adapted code*/
+.footerr{
+  background-color: #FFB81C;
+  text-align: center;
+  color: black;
+  /*height: 20%;*/
+  /*width: available;*/
+  /*height: 125%;*/
+  padding: 25px 0;
+  font-size: 16px;
+  margin-top: 250px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.vertical-adjust {
+  /*margin: 0;*/
+  position: absolute;
+  top: 5%;
+  transform: translateY(-5%);
+
+  width: 100%;
+}
+/*Adapted from W3 Schools at https://www.w3schools.com/howto/howto_css_switch.asp */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 21px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0072ce;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #FFB81C;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #0072ce;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggle_label{
+  margin-left: 8px ;
+  font-size: 1.2em;
+}
+/*End adapted code*/
+.cart_product_box{
+  background-color: rgba(68, 68, 68, 0.35);
+  padding: 10px;
+}
+
+.cart_btn{
+  width: 100%;
+}
