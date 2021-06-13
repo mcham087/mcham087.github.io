@@ -1,0 +1,413 @@
+<!doctype html>
+<!-- Here is a link to the code the documents this code is based on
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+This will help you get started with your code!
+-->
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Roboto&display=swap" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Mariah Animal Hospital</title>
+</head>
+<body>
+<!--
+I store all of the page information in a container,
+Many websites will use what is called CSS grid layouts, where you will have a header, body, footer and both sides used for ads or other information
+-->
+<div class = "container-lg">
+
+    <!--
+    Most websites now feature what is called a NavBar.
+    The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
+    https://getbootstrap.com/docs/5.0/components/navbar/
+    -->
+
+    <nav class="navbar navbar-custom p-3 my-3 justify-content-center">
+        <h1><img src="images/company_logo.png" width="79" height="82">Mariah Animal Hospital</h1>
+    </nav>
+
+    <div class="p-3 my-3 border bg-light">
+        <h2 class="">About us</h2>
+        <p class="p-4 my-3" s>Bayview Animal Hospital is a small
+          animal hospital located in the Greater Toronto Area. Our team of highly trained
+          veterinarians and staff are proud to offer a wide variety of services.
+          <br><br>
+          We are dedicated to providing the <strong>best</strong> care to you and your pet.
+        <br>
+        <div class="d-grid gap-2 d-md-block">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Schedule a Visit</button>
+        </div>
+      </p>
+    </div>
+    <!--
+    Tables are one of many ways to organize information easily.
+    It is a good way to list of prices, or services in a business website
+    https://getbootstrap.com/docs/5.0/content/tables/
+    -->
+    <div class="services" id="services">
+    <h2 class="p-3 my-3">Our Services</h2>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Wellness Exam
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><p>Annual wellness exams allow our veterinarians to identify
+                  potential issues in time to prevent them from becoming major illnesses. If your pet requires any other procedures, our veterinarians
+                  will consult you before proceeding.</p>
+                  <p style="font-weight: bold"> Cost: $100 </p></div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Dentistry
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><p>Taking care of your pet's teeth can prevent many major illnesses. But even with regular brushing, plaque
+                  and tartar can accumulate on the gums. We are equipped with a top class dental operation room and will ensure your pet comes out
+                  with bright pearly whites.</p>
+                  <p style="font-weight: bold"> Cost: $200 </p></div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Vaccination
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><p>Vaccinations boost your pet's immune system and are essential to keeping them safe. Our veterinarians will help you plan the appropriate
+                  course of vaccinations over its lifetime.</p>
+                <p style="font-weight: bold">Cost: $70</p></div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Spays & Neuters
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><p>Spays and neuters can prevent pregnancies and provide health benefits. In females, spaying decreases the chance
+                  of uterine infections and mammary cancer. In males, neutering reduces the chance of prostate and testicular cancer. We will ensure that your
+                  pet has a painless and comfortable experience as possible.</p>
+                <p style="font-weight: bold">Cost: $600</p></div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Surgery
+                </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><p>We perform oral, soft-tissue and mass removal surgeries. We equipped with the latest
+                  and most advanced technology in our operating room. We will ensure that your pet is as comfortable as possible
+                  during the procedure and that they receive the best aftercare.</p>
+                <p style="font-weight: bold">Cost: $1000</p></div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="d-grid gap-2 d-md-block">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Schedule a Visit</button>
+    </div>
+  </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Schedule a Visit</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="myWizard">
+                <!--  <form role="form" method="POST" action="">
+                    <input type="hidden" name="_token" value="">-->
+                  <div class="tab-content">
+                    <div id="contact">
+                      <div class="form-group">
+                        <label class="control-label">First Name</label>
+                        <div>
+                        <input type="firstName" class="form-control input-lg" name="firstName" value="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Last Name</label>
+                        <div>
+                          <input type="lastName" class="form-control input-lg" name="lastName" value="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label">Email Address</label>
+                        <div>
+                          <input type="email" class="form-control input-lg" name="email" value="">
+                        </div>
+                      </div>
+                    </div>
+                    <div id="pet">
+                      <div class="form-group">
+                        <label class="control-label">Pet Name</label>
+                        <div>
+                          <input type="petName" class="form-control input-lg" name="petName" value="">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="petType">
+                        <label class="control-label">What type of pet do you have?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Cat
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Dog
+                            </label>
+                        </div>
+                        <br>
+                      </div>
+                      <div id="service">
+                        <div class="form-group">
+                          <label class="control-label">Choose one or more services.</label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Wellness Exam - $100
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Dentistry - $200
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Vaccination - $70
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Spays & Neuters - $600
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Surgery - $1000
+                            </label>
+                          </div>
+                        </div>
+                    </div>
+                    <br>
+                      <div id="date">
+                        <label class="control-label">Choose a date.</label>
+                        <div class="form-group">
+                        <input type="date" id="date" name="date">
+                        </div>
+                        <br>
+                        <label class="control-label">Choose a time. </label>
+                        <div class="form-group">
+                        <input type="time" id="time" name="time">
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-primary" id="book">Book Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Cards are quite useful when building a website. They are a useful way to organize information.
+    They can be organized using a CSS grid or other layout options.
+    https://getbootstrap.com/docs/5.0/components/card/
+    -->
+  <div class="team">
+    <h2 class="p-3 my-3">Our Team</h2>
+  <!--  <div class="row justify-content-around">-->
+  <div class="container-fluid py-2">
+    <div class="d-flex flex-row flex-nowrap">
+      <div class="card" style="width: 20rem; background-color: #f8f9fa;">
+          <img src="images/dr1.jpg" class="card-img-top" alt="Dr Chris Watson">
+          <div class="card-body dflex flex-column">
+              <h5>Dr Chris Watson</h5>
+              <button type="button" class="align-self-end btn btn-secondary" data-bs-toggle="modal" data-bs-target="#dr1">
+                  Learn More
+              </button>
+          </div>
+      </div>
+        <br>
+        <div class="card" style="width: 20rem; background-color: #f8f9fa;">
+            <img src="images/dr2.jpg" class="card-img-top" alt="Dr Claudia Smith">
+            <div class="card-body dflex flex-column">
+                <h5>Dr Claudia Smith</h5>
+                <button type="button" class="align-self-end btn btn-secondary" data-bs-toggle="modal" data-bs-target="#dr2">
+                    Learn More
+                </button>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem; background-color: #f8f9fa;">
+            <img src="images/dr3.jpg" class="card-img-top" alt="Dr Sarah Malek">
+            <div class="card-body dflex flex-column">
+                <h5>Dr Sarah Malek</h5>
+                <button type="button" class="align-self-end btn btn-secondary" data-bs-toggle="modal" data-bs-target="#dr3">
+                    Learn More
+                </button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <br>
+    <br>
+    <div class="modal fade" id="dr2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dr Claudia Smith</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="images/dr2.jpg" class="card-img-top" alt="Dr Smith">
+                  <p class="card-text">
+                    <br>
+                    Dr Smith joined out team in 2018 after graduating
+                    from Ohio State University in 2018.
+                  <br>
+                  <br>
+                  She was recognized for her outstanding work by the Canadian
+                  Veterinary Medical Assocation in 2020.
+                  <br>
+                  <br>
+                  In her spare time, you can find her taking long walks on the beach
+                  with her dog, Macy. </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dr1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dr Chris Watson</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="images/dr1.jpg" class="card-img-top" alt="Dr Watson">
+                  <p class="card-text">
+                    <br>
+                    Dr Watson joined our team in 2008 after graduating
+                    from the University of Guelph.
+                  <br>
+                  <br>
+                  He specializes in small animal surgery, with over
+                  10 years of experience.
+                  <br>
+                  <br>
+                  In his spare time, he volunteers at the Toronto
+                    Humane Society and enjoys a good game of soccer.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dr3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dr Sarah Malek</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="images/dr3.jpg" class="card-img-top" alt="Dr Malek">
+                  <p class="card-text">
+                    <br>
+                    Dr Malek joined our team in 2014 after graduating from the
+                  University of Guelph.
+                <br>
+                <br>
+                She specializes in small animal dentistry and internal medicine.
+                <br>
+                <br>
+                In her spare time, she enjoys playing with her two cats, Sugar
+                and Spice.
+                </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <div class="directory">
+      <div class="row">
+        <div class="col-sm-8">
+          <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 400px">
+    <iframe src="https://maps.google.com/maps?q=234-Rideau-street&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+      style="border:0" allowfullscreen></iframe>
+  </div></div>
+        <div class="col-sm-4 p-3">
+          <h2 class="my-3">Contact Us</h2>
+          <p class="contactInfo">
+            234 Rideau street <br>Ottawa, ON <br> (514) 431-1034
+          </p>
+          <h2 class="my-3">Hours</h2>
+          <p class="contactInfo">
+            Mon: 8:00AM - 4:00PM<br>
+            Tue: 8:00AM - 4:00PM<br>
+            Wed: 8:00AM - 4:00PM<br>
+            Thu: 8:00AM - 4:00PM<br>
+            Fri: 8:00AM - 4:00PM<br>
+            Sat: Closed<br>
+            Sun: Closed<br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+</div>
+<!-- here we input our javascript helper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<footer class="footerr">
+
+  <p class="p_ft"> Website created by: Mariah Chamoun 300136871</br>
+      University of Ottawa
+  </p>
+
+</footer>
+</body>
+</html>

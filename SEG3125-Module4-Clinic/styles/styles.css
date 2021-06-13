@@ -1,0 +1,189 @@
+/*
+Colours:
+#658EA9
+#88B2CC
+#E7D4C0
+#E98973
+https://www.canva.com/colors/color-palettes/backdoor-casual/
+https://bondvet.com/veterinary-clinic-services
+https://vegibit.com/bootstrap-modal-form-examples/
+https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_date
+https://www.codeply.com/go/ZgNuykcV29/bootstrap-modal-wizard-with-progress-bar
+https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp
+https://beachesanimalhospital.com/annual-diagnostics/
+https://stackoverflow.com/questions/35993300/horizontally-scrollable-list-of-cards-in-bootstrap/42117768#42117768
+https://stackoverflow.com/questions/49911051/how-to-change-button-active-color-in-bootstrap-4
+
+logo:
+https://www.thesitewizard.com/archive/favicon.shtml
+https://www.shutterstock.com/image-vector/dog-cat-pet-care-outline-line-1064522351
+
+photos:
+https://www.gettyimages.ca/detail/photo/happy-vet-royalty-free-image/854129808
+https://www.gettyimages.ca/detail/photo/dog-at-the-vet-royalty-free-image/521023961
+https://www.gettyimages.ca/detail/photo/making-sure-your-beloved-pet-stays-healthy-royalty-free-image/453661859
+
+*/
+
+h1{
+  font-family: 'Oxygen', serif;
+  font-size: 35px;
+  font-weight: bold;
+}
+h2{
+  font-family: 'Oxygen', serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+h5{
+  font-family: 'Oxygen', serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+p{
+    font-size: 18px;
+}
+.contactInfo{
+    font-size: 16px;
+}
+td{
+    font-size: 25px;
+}
+.navbar-custom{
+    background-color: #FFA6A6;
+    color: black;
+}
+
+.btn-primary{
+    background-color: #FF8D8D;
+    font-size: 20px;
+    font-family: 'Oxygen', serif;
+}
+
+.btn-primary:hover{
+    background-color: #e57e7e;
+}
+
+.btn-primary:focus{
+    background-color: #e57e7e;
+}
+
+.btn-primary:active{
+    background-color: #e57e7e;
+    box-shadow: 0 1px 1px #e57e7e inset, 0 0 8px #e57e7e;
+    outline: 0 none;
+}
+.btn-primary:not(:disabled):not(.disabled):active{
+  background: #e57e7e;
+  outline: 0 none;
+}
+
+.btn-primary:not(:disabled):not(.disabled):focus{
+  box-shadow: 0 0 5px #e57e7e;
+}
+
+.btn-secondary{
+  background: #e57e7e;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Oxygen', serif;
+}
+
+.btn-secondary:hover{
+  background-color: #e57e7e;
+}
+
+.btn-secondary:focus{
+  background-color: #e57e7e;
+}
+
+.btn-secondary:active{
+  background-color: #e57e7e;
+  box-shadow: 0 1px 1px #e57e7e inset, 0 0 8px #e57e7e;
+  outline: 0 none;
+}
+.btn-secondary:not(:disabled):not(.disabled):active{
+background: #e57e7e;
+outline: 0 none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):focus{
+box-shadow: 0 0 5px #e57e7e;
+}
+
+.accordion-button{
+    font-weight: bold;
+    font-size: 20px;
+}
+.directory{
+    background-color: #FFA6A6;
+}
+.map-container{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+.panel{
+  max-height: 0;
+}
+.accordion-body{
+  background-color: #fce9d4;
+}
+.accordion-button{
+  background-color: #fce9d4;
+}
+.accordion-button:hover{
+    background-color: #fce9d4;
+}
+
+.accordion-button:focus{
+    background-color: #E7D4C0;
+}
+
+.accordion-button:active{
+    background-color: #E7D4C0;
+    box-shadow: 0 1px 1px #e57e7e inset, 0 0 8px #e57e7e;
+    outline: 0 none;
+    color: black;
+}
+.accordion-button:not(:disabled):not(.disabled):active{
+  background-color: #E7D4C0;
+  outline: 0 none;
+  color: black;
+}
+
+.accordion-button:not(:disabled):not(.disabled):focus{
+  box-shadow: 0 0 5px #E7D4C0;
+  color: black;
+  background-color: #E7D4C0;
+}
+.accordion-button:not(:disabled):not(.disabled){
+  box-shadow: 0 0 5px #fce9d4;
+  color: black;
+  background-color: #fce9d4;
+}
+#book{
+  background-color: #E98973;
+}
+#signature{
+  font-size: 75%;
+  text-align: right;
+}
+
+.footerr{
+  background-color: #FFA6A6;
+  text-align: center;
+  color: black;
+  padding: 10px 0;
+  font-size: 12px;
+  width: 100%;
+}
