@@ -79,12 +79,11 @@ function validatePhoneNumber() {
   phoneNumber = phoneNumber.replace('(', '');
   phoneNumber = phoneNumber.replace(')', '');
   phoneNumber = phoneNumber.replace('-', '');
-  if (phoneNumber.length != 10 || Number.isNaN(phoneNumber)) {
+  if (phoneNumber.length == 10 && !Number.isNaN(phoneNumber)) {
+    return true;
+  } else {
     document.getElementById("phoneNumErrMsg").innerHTML = errorMsg;
     return false;
-  } else {
-    document.getElementById("phoneNumErrMsg").innerHTML = "";
-    return true;
   }
 }
 
@@ -219,11 +218,39 @@ function checkEmptyFields() {
   return flag;
 }
 
+function ValidateEmail() {
+  var email = document.getElementById('inputEmail');
+  var errorMsg = "invalid email";
+  var mailformat = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  if(email.value.match(mailformat)) {
+    document.getElementById('emailErrMsg').innerHTML = "";
+    return true;
+  } else {
+    document.getElementById('emailErrMsg').innerHTML = errorMsg;
+    return false;
+  }
+}
+
+function ValidatePostalCode() {
+  var postalCode = document.getElementById('inputPostal');
+  var errorMsg = "invalid postal code";
+  var postalformat = /^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$/;
+  if(postalCode.value.match(postalformat)) {
+    document.getElementById('postalErrMsg').innerHTML = "";
+    return true;
+  } else {
+    document.getElementById('postalErrMsg').innerHTML = errorMsg;
+    return false;
+  }
+}
+
 function proceedToPayment() {
-  var validPhone = validatePhoneNumber();
-  getTotals();
   var validForm = checkEmptyFields();
-  if (validForm && validPhone) {
+  var validPhone = validatePhoneNumber();
+  var validEmail = ValidateEmail();
+  var validPostalCode = ValidatePostalCode();
+  getTotals();
+  if (validForm && validPhone && validEmail && validPostalCode) {
     document.getElementById("payment").style.display = "flex";
   }
   return false;
@@ -242,11 +269,23 @@ function validateCardNum() {
   }
 }
 
+function validateCVV() {
+  var cvv = document.getElementById('inputCVV').value;
+  var errorMsg = "invalid ccv number";
+  cardNum = cardNum.replace(/\s/g, '');
+  if (cvv.length == 3 && !Number.isNaN(cvv)) {
+    document.getElementById("CVVNumErrMsg").innerHTML = "";
+    return true;
+  } else {
+    document.getElementById("CVVNumErrMsg").innerHTML = errorMsg;
+    return false;
+  }
+}
+
 function processPayment() {
   var cardName = document.getElementById('inputCardHolder').value;
   var cvv = document.getElementById('inputCVV').value;
-  var expiration = document.getElementById('inputExpiration').value;
-  if (validateCardNum() && cardName && cvv && expiration) {
+  if (validateCardNum() && cardName && cvv && validateCVV()) {
     document.getElementById('bookingSuccessful').style.display = "flex";
   }
 }
