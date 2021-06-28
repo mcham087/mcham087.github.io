@@ -16,7 +16,7 @@
     <nav class="navbar custom-navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#homepage">
-          <h1 class="navbar-title"><img src="images/company_logo.png" width="75" height="70">Mariah's Veterinary Clinic</h1>
+          <h1 class="navbar-title"><img src="images/company_logo.png" width="79" height="82">Mariah's Veterinary Clinic</h1>
         </a>
         <div class="nav-buttons">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -460,7 +460,30 @@
             <div class="row">
               <div class="col-md-6">
                 <label for="inputExpiration" class="form-label">Expiration</label>
-                <input type="text" class="form-control" id="inputExpiration">
+                <select class="form-select" name='expireMM' id='expireMM'>
+                  <option value=''>Month</option>
+                  <option value='01'>January</option>
+                  <option value='02'>February</option>
+                  <option value='03'>March</option>
+                  <option value='04'>April</option>
+                  <option value='05'>May</option>
+                  <option value='06'>June</option>
+                  <option value='07'>July</option>
+                  <option value='08'>August</option>
+                  <option value='09'>September</option>
+                  <option value='10'>October</option>
+                  <option value='11'>November</option>
+                  <option value='12'>December</option>
+              </select> 
+              <select class="form-select" name='expireYY' id='expireYY'>
+                  <option value=''>Year</option>
+                  <option value='20'>2020</option>
+                  <option value='21'>2021</option>
+                  <option value='22'>2022</option>
+                  <option value='23'>2023</option>
+                  <option value='24'>2024</option>
+              </select> 
+              <input class="inputCard" type="hidden" name="expiry" id="expiry" maxlength="4"/>
               </div>
               <div class="col-md-6">
                 <label for="inputCVV" class="form-label">
@@ -468,7 +491,8 @@
                   <img src="images/tooltip-icon.png" style="width:25px; margin-bottom:5px;"
                   data-bs-toggle="tooltip" rel="tooltip" data-bs-placement="right" title="The 3 numbers on the back of your card">
                 </label>
-                <input type="text" id="inputCVV" class="form-control">
+                <input type="text" id="inputCVV" class="form-control" maxlength="3">
+                <p class="errorMsg" id="CVVNumErrMsg"></p>
               </div>
             </div>
             <div class="col-6">
