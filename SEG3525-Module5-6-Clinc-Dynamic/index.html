@@ -445,7 +445,7 @@
             <div class="row">
               <div class="col-6">
                 <label for="inputCardNumber" class="form-label cardNum">
-                  Credit Card Number
+                  Credit Card Number:
                   <img src="images/tooltip-icon.png" style="width:25px; margin-bottom:5px;"
                   data-bs-toggle="tooltip" rel="tooltip" data-bs-placement="right" title="We take payment beforehand in the event of last-minute cancellation">
                 </label>
@@ -453,13 +453,14 @@
                 <p class="errorMsg" id="cardNumErrMsg"></p>
               </div>
               <div class="col-6">
-                <label for="inputCardHolder" class="form-label">Name on Card</label>
+                <label for="inputCardHolder" class="form-label">Name on Card:</label>
                 <input type="text" class="form-control" id="inputCardHolder">
+                <p class="errorMsg" id="CardHolderErrMsg"></p>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6">
-                <label for="inputExpiration" class="form-label">Expiration</label>
+                <label for="expireMM" class="form-label">Expiration Month:</label>
                 <select class="form-select" name='expireMM' id='expireMM'>
                   <option value=''>Month</option>
                   <option value='01'>January</option>
@@ -474,7 +475,11 @@
                   <option value='10'>October</option>
                   <option value='11'>November</option>
                   <option value='12'>December</option>
-              </select> 
+              </select>
+              <p class="errorMsg" id="MMNumErrMsg"></p>
+              </div>
+              <div class="col-md-6">
+              <label for="expireYY" class="form-label">Expiration Year:</label>
               <select class="form-select" name='expireYY' id='expireYY'>
                   <option value=''>Year</option>
                   <option value='20'>2020</option>
@@ -483,11 +488,11 @@
                   <option value='23'>2023</option>
                   <option value='24'>2024</option>
               </select> 
-              <input class="inputCard" type="hidden" name="expiry" id="expiry" maxlength="4"/>
+              <p class="errorMsg" id="YYNumErrMsg"></p>
               </div>
               <div class="col-md-6">
                 <label for="inputCVV" class="form-label">
-                  CVV
+                  CVV:
                   <img src="images/tooltip-icon.png" style="width:25px; margin-bottom:5px;"
                   data-bs-toggle="tooltip" rel="tooltip" data-bs-placement="right" title="The 3 numbers on the back of your card">
                 </label>
