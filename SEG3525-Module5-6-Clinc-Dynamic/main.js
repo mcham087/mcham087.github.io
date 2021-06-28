@@ -79,7 +79,7 @@ function validatePhoneNumber() {
   phoneNumber = phoneNumber.replace('(', '');
   phoneNumber = phoneNumber.replace(')', '');
   phoneNumber = phoneNumber.replace('-', '');
-  if (phoneNumber.length == 10 && !Number.isNaN(phoneNumber)) {
+  if (phoneNumber.length == 10 && !isNaN(phoneNumber)) {
     return true;
   } else {
     document.getElementById("phoneNumErrMsg").innerHTML = errorMsg;
@@ -235,7 +235,7 @@ function ValidatePostalCode() {
   var postalCode = document.getElementById('inputPostal');
   var errorMsg = "invalid postal code";
   var postalformat = /^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$/;
-  if(postalCode.value.match(postalformat)) {
+  if(postalCode.value.toUpperCase().match(postalformat)) {
     document.getElementById('postalErrMsg').innerHTML = "";
     return true;
   } else {
@@ -260,20 +260,21 @@ function validateCardNum() {
   var cardNum = document.getElementById('inputCardNumber').value;
   var errorMsg = "invalid credit card number";
   cardNum = cardNum.replace(/\s/g, '');
-  if (cardNum.length != 16 || Number.isNaN(cardNum)) {
-    document.getElementById("cardNumErrMsg").innerHTML = errorMsg;
-    return false;
-  } else {
+  if (cardNum.length == 16 && !isNaN(cardNum)) {
     document.getElementById("cardNumErrMsg").innerHTML = "";
     return true;
+  } else {
+    document.getElementById("cardNumErrMsg").innerHTML = errorMsg;
+    return false;
   }
 }
 
 function validateCVV() {
   var cvv = document.getElementById('inputCVV').value;
   var errorMsg = "invalid ccv number";
-  cardNum = cardNum.replace(/\s/g, '');
-  if (cvv.length == 3 && !Number.isNaN(cvv)) {
+  cvv = cvv.replace(/\s/g, '');
+  console.log("cvv "+!isNaN(cvv))
+  if (cvv.length == 3 && !isNaN(cvv)) {
     document.getElementById("CVVNumErrMsg").innerHTML = "";
     return true;
   } else {
@@ -282,10 +283,52 @@ function validateCVV() {
   }
 }
 
-function processPayment() {
+function validateYY() {
+  var flag = true
+  var yy = document.getElementById('expireYY').value;
+  var mm = document.getElementById('expireMM').value;
+  var errorMsgYY = "please select a year";
+  var errorMsgMM = "please select a month";
+  if (yy != '') {
+    document.getElementById("YYNumErrMsg").innerHTML = "";
+    flag = true;
+  } else {
+    document.getElementById("YYNumErrMsg").innerHTML = errorMsgYY;
+    flag = false;
+  }
+
+  if (mm != '') {
+    document.getElementById("MMNumErrMsg").innerHTML = "";
+    flag = true;
+  } else {
+    document.getElementById("MMNumErrMsg").innerHTML = errorMsgMM;
+    flag = false;
+  }
+
+  return flag;
+}
+
+function validateCardName() {
   var cardName = document.getElementById('inputCardHolder').value;
-  var cvv = document.getElementById('inputCVV').value;
-  if (validateCardNum() && cardName && cvv && validateCVV()) {
+  var errorMsg = "field cannot be empty";
+  if (cardName) {
+    document.getElementById("CardHolderErrMsg").innerHTML = "";
+    return true;
+  } else {
+    document.getElementById("CardHolderErrMsg").innerHTML = errorMsg;
+    return false;
+  }
+}
+
+function processPayment() {
+  var validCardNumber = validateCardNum();
+  console.log(validCardNumber);
+  var validCCV = validateCVV();
+  console.log(validCCV);
+  var validCardName = validateCardName();
+  console.log(validCardName);
+  var validYY = validateYY();
+  if (validCardNumber && validYY && validCardName && validCCV) {
     document.getElementById('bookingSuccessful').style.display = "flex";
   }
 }
